@@ -1,16 +1,7 @@
-# tasarim_calismasi_food
+# Yemek Tarifi UI
 
-A new Flutter project.
+Techcareer Flutter Bootcamp sürecinde verilen ödev için oluşturulmuştur. 
+Kısa sürede hazırlandığı için okunabilir ve kaliteli kod yazım kurallarına göre hazırlanmamıştır fakat düzeltilecektir. 
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![WhatsApp Image 2022-08-24 at 18 42 34](https://user-images.githubusercontent.com/17355685/186462446-ecf39016-9bbc-4710-a2c5-34d67970bba4.jpeg)
