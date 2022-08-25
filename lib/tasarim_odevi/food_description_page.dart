@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FoodDescriptionPage extends StatefulWidget {
   const FoodDescriptionPage({Key? key}) : super(key: key);
@@ -19,12 +20,13 @@ class _FoodDescriptionPageState extends State<FoodDescriptionPage>
 
   @override
   Widget build(BuildContext context) {
+    var languageData = AppLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 25),
+        padding: const EdgeInsets.symmetric(horizontal: 25),
         child: Column(
           children: [
             Padding(
@@ -33,10 +35,10 @@ class _FoodDescriptionPageState extends State<FoodDescriptionPage>
             ),
             Container(
               alignment: Alignment.centerLeft,
-              child: const Text(
-                "Tavuk Tabagı",
+              child: Text(
+                languageData!.yemekBaslik,
                 textAlign: TextAlign.left,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 36,
                   fontWeight: FontWeight.bold,
                   fontFamily: "Lato",
@@ -49,30 +51,30 @@ class _FoodDescriptionPageState extends State<FoodDescriptionPage>
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
-                    children: const [
-                      Icon(
+                    children:  [
+                      const Icon(
                         Icons.star,
                         color: Colors.deepOrange,
                       ),
-                      Text("4.9")
+                      Text(languageData.puan)
                     ],
                   ),
                   Row(
-                    children: const [
-                      Icon(
+                    children:  [
+                      const Icon(
                         Icons.local_fire_department,
                         color: Colors.deepOrange,
                       ),
-                      Text("500 Calories")
+                      Text(languageData.kaloriDegeri)
                     ],
                   ),
                   Row(
-                    children: const [
-                      Icon(
+                    children:  [
+                      const Icon(
                         Icons.timelapse_outlined,
                         color: Colors.black,
                       ),
-                      Text("20-30 Dk")
+                      Text(languageData.pisirmeSuresi)
                     ],
                   ),
                 ],
@@ -80,28 +82,26 @@ class _FoodDescriptionPageState extends State<FoodDescriptionPage>
             ),
             Container(
               alignment: Alignment.bottomLeft,
-              child: const Text(
-                "Açıklama",
-                style: TextStyle(
+              child:  Text(
+                languageData.aciklamaBaslik,
+                style: const TextStyle(
                   fontFamily: "Lato",
                   fontSize: 25,
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 13, bottom: 16),
-              child: Text(
-                "Lorem ipsum is simply dummy Lorem ipsum is simply dummy Lorem ipsum is simply dummy Lorem ips"
-                "um is simply dummy Lorem ipsum is simply dummy  ",
-                style: TextStyle(
+             Padding(
+              padding: const EdgeInsets.only(top: 13, bottom: 10),
+              child: Text(languageData.aciklamaYazisi + languageData.aciklamaYazisi,
+                style: const TextStyle(
                     fontFamily: "Lato_Light", height: 1.2, letterSpacing: 1.0),
               ),
             ),
             Container(
               alignment: Alignment.bottomLeft,
-              child: const Text(
-                "Malzemeler",
-                style: TextStyle(
+              child: Text(
+                languageData.malzemelerBaslik,
+                style: const TextStyle(
                   fontFamily: "Lato",
                   fontSize: 20,
                 ),
@@ -109,11 +109,11 @@ class _FoodDescriptionPageState extends State<FoodDescriptionPage>
             ),
             Container(
               alignment: Alignment.bottomLeft,
-              child: const Padding(
+              child:  Padding(
                 padding: EdgeInsets.only(top: 13),
                 child: Text(
-                  "- 1 Yumurta\n- 200gr Tavuk Fileto\n- 3 Biber",
-                  style: TextStyle(
+                  languageData.malzemeListesi,
+                  style: const TextStyle(
                       fontFamily: "Lato_Light",
                       height: 1.2,
                       letterSpacing: 1.0),
@@ -142,7 +142,7 @@ class _FoodDescriptionPageState extends State<FoodDescriptionPage>
                       elevation: 3,
                       minimumSize: const Size(250, 40), //////// HERE
                     ),
-                    child: const Text("Yemek Tarifini Aç"),
+                    child:  Text(languageData.buttonText),
                   ),
                 ],
               ),
