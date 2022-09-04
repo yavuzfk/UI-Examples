@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:tasarim_calismasi_food/calculator/calculator_page.dart';
 import 'package:tasarim_calismasi_food/navigator_odevi/anasayfa.dart';
 import 'package:tasarim_calismasi_food/tasarim_odevi/food_description_page.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -29,8 +30,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+
+
       ),
-      home: const Anasayfa(),
+      home: const CalculatorPage(),
     );
   }
 }
